@@ -102,6 +102,7 @@ class SliceViewerDataView(QWidget):
         self.fig = Figure()
         self.ax = None
         self.image = None
+        self.is_transposed = False
         self._grid_on = False
         self.fig.set_facecolor(self.palette().window().color().getRgbF())
         self.canvas = SliceViewerCanvas(self.fig)
@@ -292,17 +293,19 @@ class SliceViewerDataView(QWidget):
         old_extent = None
         if self.image is not None:
             old_extent = self.image.get_extent()
-            if self.image.transpose != self.dimensions.transpose:
+            # The following check is used because the transpose attribute cannot be set for imshow
+            if self.is_transposed != self.dimensions.transpose:
                 e1, e2, e3, e4 = old_extent
                 old_extent = e3, e4, e1, e2
 
+        self.is_transposed = self.dimensions.transpose
         self.clear_image()
         self.image = self.ax.imshow(
             ws,
             origin='lower',
             aspect='auto',
             interpolation='none',
-            transpose=self.dimensions.transpose,
+            transpose=self.dimensions.transpose, # transpose cannot be set to true
             norm=self.colorbar.get_norm(),
             extent=old_extent,
             **kwargs)

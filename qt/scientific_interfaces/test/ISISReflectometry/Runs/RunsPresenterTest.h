@@ -684,7 +684,7 @@ private:
 #else
     Plotter plotter;
 #endif
-    ClipboardFactory &cbf = ClipboardFactory();
+    ClipboardFactory cbf = ClipboardFactory();
     auto makeRunsTablePresenter = RunsTablePresenterFactory(
         m_instruments, m_thetaTolerance, &cbf, std::move(plotter));
     auto presenter =

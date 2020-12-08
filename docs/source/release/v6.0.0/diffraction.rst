@@ -12,6 +12,9 @@ Diffraction Changes
 New features
 ------------
 
+- New algorithm :ref:`D7YIGPositionCalibration <algm-D7YIGPositionCalibration>` to perform wavelength and detector position calibration for the ILL D7 instrument.
+- The Engineering Diffraction interface can now be saved and recovered as part of a project file or after a crash.
+
 Powder Diffraction
 ------------------
 New features

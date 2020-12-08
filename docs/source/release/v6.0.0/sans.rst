@@ -41,4 +41,11 @@ Bugfixes
   throw a Runtime Error.
 - ISIS SANS will print the name of any missing maskfiles instead of an empty name.
 
+Changes
+#######
+
+- Workspace names for ISIS SANS reductions no longer append the wavelength to the name. The prepended
+  wavelength is still present. For example `12345_rear_1d_1.0_10.0_...p0_t4_1.0_10.0` will now be called
+  `12345_rear_1d_1.0_10.0_...p0_t4`, where `1.0_10.0` is the wavelength of that workspace.
+
 :ref:`Release 6.0.0 <v6.0.0>`

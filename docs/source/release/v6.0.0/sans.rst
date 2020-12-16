@@ -20,6 +20,8 @@ Algorithms and instruments
 Improvements
 ############
 
+ - The core algorithm for ISIS SANS reductions underwent a significant rewrite to improve processing wavelength slices.
+   For 15 slices the reduction time dropped by 55% compared to the previous release.
  - In :ref:`SANSILLAutoProcess <algm-SANSILLAutoProcess>`, the beam radius can be different for each distance.
    A new parameter, TransmissionBeamRadius, has been added to set the beam radius for transmission experiments.
    The default value of all beam radii is now 0.1m.

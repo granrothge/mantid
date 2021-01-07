@@ -25,6 +25,7 @@ Algorithms
 - :ref:`CropWorkspaceRagged <algm-CropWorkspaceRagged>` now produces ragged workspace and can now be used on large data sets.
 - Added the ability to specify a ``CustomGroupingString`` when creating a detector grouping workspace using :ref:`CreateGroupingWorkspace <algm-CreateGroupingWorkspace>`.
 - :ref:`LoadLamp <algm-LoadLamp>` is corrected to load sample logs as well under python3.
+- Added the ability to specify the spectrum number in :ref:`FindPeaksAutomatic <algm-FindPeaksAutomatic>`.
 
 Fitting
 -------

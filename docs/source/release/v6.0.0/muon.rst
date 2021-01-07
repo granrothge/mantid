@@ -66,5 +66,6 @@ Algorithms
 - The functions RemoveExpDecay and EstimateMuonAsymmetryFromCounts were modified to use point data instead of bin edges for removing the exponential.
 - LoadPSIMuonBin and LoadMuonNexusV2 can now return a table of time zeros
 - MuonPreProcess has a new input 'TimeZeroTable' which requires a TableWorkspace of time zero values
+- Added the ability to specify the spectrum number in :ref:`FindPeaksAutomatic <algm-FindPeaksAutomatic>`.
 
 :ref:`Release 6.0.0 <v6.0.0>`
